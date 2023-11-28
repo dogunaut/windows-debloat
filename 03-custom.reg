@@ -1,0 +1,41 @@
+Windows Registry Editor Version 5.00
+
+
+; change title bar colour
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\DWM]
+"AccentColor"=dword:ff222222
+"AccentColorInactive"=dword:00222222
+"ColorPrevalence"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize]
+"SpecialColor"=dword:00222222
+
+
+; require password for uac prompts
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+"ConsentPromptBehaviorAdmin"=dword:00000001
+"ConsentPromptBehaviorUser"=dword:00000001
+
+
+; restore old explorer context menus (win 11)
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32]
+@=""
+
+
+; allow multiple network interfaces to be used at once
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WcmSvc\Local]
+"fMinimizeConnections"=dword:00000000
+
+
+; use old alt+tab ui
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer]
+"AltTabSettings"=dword:00000001
+
+
+; open external links in private windows
+[HKEY_CLASSES_ROOT\FirefoxHTML-308046B0AF4A39CB\shell\open\command]
+@="\"C:\\Program Files\\Mozilla Firefox\\firefox.exe\" -osint -private-window \"%1\""
+
+[HKEY_CLASSES_ROOT\FirefoxURL-308046B0AF4A39CB\shell\open\command]
+@="\"C:\\Program Files\\Mozilla Firefox\\firefox.exe\" -osint -private-window \"%1\""
+
