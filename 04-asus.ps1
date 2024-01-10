@@ -45,6 +45,7 @@ Get-ScheduledTask StartCN | Disable-ScheduledTask
 
 Get-ScheduledTask "ASUS Optimization 36D18D69AFC3" | Disable-ScheduledTask
 Get-ScheduledTask "ASUS Update Checker 2.0" | Disable-ScheduledTask
+Get-ScheduledTask "AsusSystemAnalysis_754F3273-0563-4F20-B12F-826510B07474" | Disable-ScheduledTask
 Get-ScheduledTask RtkAudUService64_BG | Disable-ScheduledTask
 
 
