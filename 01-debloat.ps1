@@ -21,6 +21,10 @@ Stop-Service "LanmanWorkstation"
 Set-Service "LanmanWorkstation" -StartupType Disabled
 
 # Superfetch
+Disable-MMAgent -ApplicationLaunchPrefetching
+Disable-MMAgent -ApplicationPreLaunch
+Disable-MMAgent -MemoryCompression
+
 Stop-Service "SysMain"
 Set-Service "SysMain" -StartupType Disabled
 
