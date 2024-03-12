@@ -50,7 +50,7 @@ Get-ScheduledTask RtkAudUService64_BG | Disable-ScheduledTask
 
 
 
-#Disable-PnpDevice -InstanceId (Get-PnpDevice -FriendlyName "ASUS System Control Interface v3").InstanceId -Confirm:$false
+Disable-PnpDevice -InstanceId (Get-PnpDevice -FriendlyName "ASUS System Control Interface v3").InstanceId -Confirm:$false
 
 Disable-PnpDevice -InstanceId (Get-PnpDevice -FriendlyName "DolbyAPO Software Device (HSA)").InstanceId -Confirm:$false
 Disable-PnpDevice -InstanceId (Get-PnpDevice -FriendlyName "DolbyAPO SWC Device").InstanceId -Confirm:$false
