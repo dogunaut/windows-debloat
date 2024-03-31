@@ -9,3 +9,8 @@ winget uninstall "Microsoft Tips"
 
 winget uninstall "Ink.Handwriting.Main.en-US.1.0"
 winget uninstall "Dev Home"
+
+winget uninstall "Cross Device Experience Host"
+winget uninstall "Microsoft Copilot"
+winget uninstall "Outlook for Windows"
+winget uninstall "Ink.Handwriting.en-US.1.0"
