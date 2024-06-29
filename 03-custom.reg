@@ -43,3 +43,19 @@ Windows Registry Editor Version 5.00
 ; add performance boost mode to power plan
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\54533251-82be-4824-96c1-47b60b740d00\be337238-0d82-4146-a960-4f3749d470c7]
 "Attributes"=dword:00000002
+
+
+
+
+; MSI interrupts
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\PCI\VEN_10DE&DEV_22BE&SUBSYS_180D1043&REV_A1\4&2b5a5da1&0&0109\Device Parameters\Interrupt Management\MessageSignaledInterruptProperties]
+"MSISupported"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\PCI\VEN_1022&DEV_15E3&SUBSYS_14631043&REV_00\4&98C338A&0&0641\Device Parameters\Interrupt Management\MessageSignaledInterruptProperties]
+"MSISupported"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\PCI\VEN_1022&DEV_15E2&SUBSYS_14631043&REV_63\4&98C338A&0&0541\Device Parameters\Interrupt Management\MessageSignaledInterruptProperties]
+"MSISupported"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\PCI\VEN_1002&DEV_1640&SUBSYS_180D1043&REV_00\4&98C338A&0&0141\Device Parameters\Interrupt Management\MessageSignaledInterruptProperties]
+"MSISupported"=dword:00000001
