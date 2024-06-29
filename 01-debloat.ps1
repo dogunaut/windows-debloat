@@ -79,9 +79,26 @@ foreach ($bind in $binds) {
 
 
 Write-Host "`r`n"
-Write-Host "Small tweaks..."
+Write-Host "Unhiding power plan options..."
 
+# USB 3 Link Power Management
 powercfg -attributes 2a737441-1930-4402-8d77-b2bebba308a3 d4e98f31-5ffe-4ce1-be31-1b38b384c009 -ATTRIB_HIDE
+
+# Interrupt steering
+powercfg -attributes 48672f38-7a9a-4bb2-8bf8-3d85be19de4e 2bfc24f9-5ea2-4801-8213-3dbae01aa39d -ATTRIB_HIDE
+
+
+Write-Host "`r`n"
+Write-Host "Fixing system clock..."
+
+bcdedit /set useplatformclock false
+bcdedit /set disabledynamictick yes
+
+
+Write-Host "`r`n"
+Write-Host "Disabling legacy USB enumerator..."
+
+Disable-PnpDevice -InstanceId (Get-PnpDevice -FriendlyName "Microsoft Device Association Root Enumerator").InstanceId -Confirm:$false
 
 
 
